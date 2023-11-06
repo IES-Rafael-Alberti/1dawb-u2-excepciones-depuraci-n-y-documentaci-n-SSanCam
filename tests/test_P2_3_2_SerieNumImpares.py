@@ -1,14 +1,14 @@
 import pytest 
 from src.P2_3_2_SerieNumImpares import serie_impares
 
-"""
+
 @pytest.mark.parametrize(
     "numero, expected",
     [
         (11, [1, 3, 5, 7, 9, 11])
     ]
 )
-"""
+
 
 def test_P2_3_2_SerieNumImpares(numero, expected):
     assert serie_impares(numero) == expected
