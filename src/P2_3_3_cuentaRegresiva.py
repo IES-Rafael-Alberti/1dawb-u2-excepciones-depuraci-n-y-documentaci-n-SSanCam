@@ -5,10 +5,10 @@ def cuenta_atras(numero: int) -> list:
     
     serie = anios_cumplido(numero)
     
-    print(serie)
     serie = list(range(numero, -1, -1))
-    print(serie)
     return serie
+
+
 
 def main():
     
@@ -17,14 +17,19 @@ def main():
         print("Introduce un numero entero positivo: ")
         numero = int(input())
         
+        while (numero <= 0):
+            numero = int(input("ERROR\nDebes introducir un numero entero positivo: "))
+        
         print("Cuenta atras: ")
-        return cuenta_atras(numero)
+        return print(cuenta_atras(numero))
     
     except TypeError:
         print("Error. Debes introducir un numero entero positivo.")
         
     except Exception:
         print("404 Error indeterminado.")
+    
+    
     
 if __name__=="__main__":
     main()

@@ -1,11 +1,12 @@
 """Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas."""
 
+
 def serie_impares(numero: int) -> list:
     from P2_3_1_anios_cumplidos import anios_cumplido
-   
     serie = anios_cumplido(numero)
-    
+
     serieNumImpares = (serie[::2])
+    
     return serieNumImpares
  
 
