@@ -1,16 +1,14 @@
 """Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas."""
 
-def serie_impares(numero: int):
+def serie_impares(numero: int) -> list:
     from P2_3_1_anios_cumplidos import anios_cumplido
    
     serie = anios_cumplido(numero)
     
-    serie = (serie[::2])
-    return serie
-    
-    
-    
-    
+    serieNumImpares = (serie[::2])
+    return serieNumImpares
+ 
+
 def main():
     
     try: 
@@ -20,8 +18,11 @@ def main():
         
         if (numero <= 0):
             raise Exception
+        
         else:
-            print(serie_impares(numero))
+            resultado = (serie_impares(numero))
+            print("La serie de numeros impares desde 1 hasta tu numero es:")
+            print(resultado)
 
         
     except TypeError:

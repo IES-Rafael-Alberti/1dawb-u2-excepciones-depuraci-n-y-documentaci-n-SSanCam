@@ -1,12 +1,12 @@
 """Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad)."""
 
-def anios_cumplido(edad: int) -> str:
+def anios_cumplido(edad: int) -> list:
         
     cumplido = []
     if (edad <= 0):
         raise Exception
                 
-    for anio in range(1,edad+1):
+    for anio in range(1, edad+1):
         cumplido.append(anio)
     
     return cumplido
