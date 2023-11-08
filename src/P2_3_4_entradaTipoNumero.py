@@ -2,7 +2,7 @@
 def tipo_entrada(numero: int) -> str:
 
         if (type(numero) != int):
-            raise ValueError
+            raise ValueError("La entrada no es correcta.")
         
         else: 
             msj = ("Entrada correcta.")
@@ -19,8 +19,8 @@ def main():
         
         return print(resultado)
         
-    except ValueError:
-        print("La entrada no es correcta.")
+    except ValueError as e:
+        print(e)
     
 if __name__=="__main__":
     main()
