@@ -2,9 +2,9 @@
 lance la excepción NameError con el mensaje, "Incorrect Password!!" """
 def solicitarContrasenia(contrasenia: str) -> str:
 
-    password = "pestillo1234"
+    savedPassword = "pestillo1234"
         
-    if (contrasenia == password):
+    if (contrasenia == savedPassword):
         return "Contraseña correcta!"
         
     else: 

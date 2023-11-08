@@ -13,7 +13,8 @@ def tipo_entrada(numero: int) -> str:
 
 def main():
     
-    try :  
+    try : 
+         
         numero = int(input("Introduce un numero: "))
         resultado = tipo_entrada(numero)
         
