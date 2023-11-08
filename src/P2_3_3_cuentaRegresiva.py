@@ -1,9 +1,9 @@
 """Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas. 
 Deberá solicitar el número hasta introducir uno correcto."""
 def cuenta_atras(numero: int) -> list:
-    from P2_3_1_anios_cumplidos import anios_cumplido
+    from P2_3_1_anios_cumplidos import cada_anio
     
-    serie = anios_cumplido(numero)
+    serie = cada_anio(numero)
     
     serie = list(range(numero, -1, -1))
     return serie

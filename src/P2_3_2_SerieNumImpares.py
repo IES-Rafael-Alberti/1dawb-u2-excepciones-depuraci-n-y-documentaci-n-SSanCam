@@ -1,9 +1,9 @@
 """Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas."""
 
-
 def serie_impares(numero: int) -> list:
-    from P2_3_1_anios_cumplidos import anios_cumplido
-    serie = anios_cumplido(numero)
+    from src.P2_3_1_anios_cumplidos import cada_anio
+    
+    serie = cada_anio(numero)
 
     serieNumImpares = (serie[::2])
     
@@ -11,7 +11,6 @@ def serie_impares(numero: int) -> list:
  
 
 def main():
-    
     try: 
         
         print("Ingresa un número: ")

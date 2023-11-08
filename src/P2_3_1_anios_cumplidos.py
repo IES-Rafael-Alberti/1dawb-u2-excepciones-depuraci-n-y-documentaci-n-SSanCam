@@ -1,10 +1,10 @@
 """Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad)."""
 
-def anios_cumplido(edad: int) -> list:
+def cada_anio(edad: int) -> list:
         
     cumplido = []
     if (edad <= 0):
-        raise Exception
+        raise Exception("ERROR\nDebes introducir valores numéricos enteros positivos.")
                 
     for anio in range(1, edad+1):
         cumplido.append(anio)
@@ -32,13 +32,13 @@ def main():
         
         if (edad > 0):
             print("Desde que naciste, has cumplido estos años: ")
-            print(anios_cumplido(edad))
+            print(cada_anio(edad))
             
     except TypeError: #va a ejecutar el error que he elevadoa antes en if edad < 0
         print ("**ERROR**\nDebes introducir números enteros positivos.")
         
-    except Exception:
-        print("ERROR\nDebes introducir valores numéricos enteros positivos.")  
+    except Exception as e:
+        print(e)
       
         
 if __name__=="__main__":

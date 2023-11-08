@@ -1,5 +1,5 @@
 import pytest 
-from src.P2_3_1_anios_cumplidos import anios_cumplido
+from src.P2_3_1_anios_cumplidos import cada_anio
 
 
 @pytest.mark.parametrize(
@@ -10,12 +10,13 @@ from src.P2_3_1_anios_cumplidos import anios_cumplido
 )
 
 def test_P2_3_1_anios_cumplidos (edad, expected):
-    assert anios_cumplido(edad) == expected 
+    assert cada_anio(edad) == expected 
     
 
 def test_comprobar_numero():
     with pytest.raises(TypeError):
-        anios_cumplido("edad")
+        cada_anio("edad")
         
-    with pytest.raises(Exception):
-        anios_cumplido(-5)
+    with pytest.raises(Exception) as e:
+        cada_anio(-5)
+        assert str(e.value) == "ERROR\nDebes introducir valores numéricos enteros positivos."
