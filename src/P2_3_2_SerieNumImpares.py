@@ -10,6 +10,7 @@ def serie_impares(numero: int) -> list:
     return serieNumImpares
  
 
+
 def main():
     try: 
         

@@ -11,12 +11,6 @@ def cada_anio(edad: int) -> list:
     
     return cumplido
     
-    #else: si no captura ninguna excepcion, ejecuta el else
-        #serie = obtenerSerie(edad)
-    
-    #finally: es algo que se ejecurata siempre
-  
-
 ########################
 
 
