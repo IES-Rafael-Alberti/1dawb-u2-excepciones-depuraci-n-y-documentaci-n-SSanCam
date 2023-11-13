@@ -30,7 +30,7 @@ def main():
         print("ERROR\nDebes ingresar numeros enteros positivos.")
     
     except ValueError:
-        print("Debes ngresar valores numericos.") 
+        print("Debes ingresar valores numericos.") 
 
     except Exception:
         print("ERROR.\n Introduce valores superiores a 0.")

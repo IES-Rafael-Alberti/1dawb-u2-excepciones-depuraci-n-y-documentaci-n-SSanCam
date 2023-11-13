@@ -1,29 +1,38 @@
 def ordenacionAlgoritmoBurbuja(listaNumeros: list) -> list:
     
     cont = len(listaNumeros)
-    cadenaLista = str(listaNumeros)
     
-    for buclePadre in range(1,len(listaNumeros)):
-        
+    #Con la primera iteracion recorreremos todos los numeros de la cadena 
+    for i in range(cont + 1):
+        #En la segunda iteracion, comparamos el numero donde nos encontremos con el siguiente a la derecha.
+        for j in range(0, cont - i - 1):
+            if listaNumeros[j] > listaNumeros[j + 1]:
+            #Segun la condicion dada, si se cumple, se intercambian la posicion de los numeros que estamos comparando 
+                a = listaNumeros[j]
+                b = listaNumeros[j + 1]
+                
+                listaNumeros[j] = b
+                listaNumeros[j + 1] = a
 
     return listaNumeros
-
-
-
+    
+    
+#####################################################################
 def main():
     
     try:
-        
         lista_numeros = []
-        numero = int(input("Ingresa todos los numeros enteros positivos que quieres incluir en la lista.\nIngresa 0 para finalizar:  "))
-        
-        while (numero != 0):
-            numero = int(input())
+        print("Ingresa todos los numeros enteros positivos que quieres incluir en la lista.\nIngresa 0 para finalizar:  ")
+        indice = 1
+        numero = int(input(f"{indice}.- "))
+        while (numero > 0):
+            indice += 1
+            numero = int(input(f"{indice}.- "))
+            if (numero == 0):    
+                resultado = print(ordenacionAlgoritmoBurbuja(lista_numeros))
+                return (resultado)
             lista_numeros.append(numero)
             
-        resultado = ordenacionAlgoritmoBurbuja(lista_numeros)
-        return print(resultado)
-    
     except Exception:
         return "ERROR - 404"
     
