@@ -8,11 +8,11 @@ def ordenacionAlgoritmoBurbuja(listaNumeros: list) -> list:
         for j in range(0, cont - i - 1):
             if listaNumeros[j] > listaNumeros[j + 1]:
             #Segun la condicion dada, si se cumple, se intercambian la posicion de los numeros que estamos comparando 
-                a = listaNumeros[j]
-                b = listaNumeros[j + 1]
+                j_temporal = listaNumeros[j]
+                j1_temporal = listaNumeros[j + 1]
                 
-                listaNumeros[j] = b
-                listaNumeros[j + 1] = a
+                listaNumeros[j] = j1_temporal
+                listaNumeros[j + 1] = j_temporal
 
     return listaNumeros
     
