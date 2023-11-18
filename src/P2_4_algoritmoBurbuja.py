@@ -1,5 +1,5 @@
 def ordenacionAlgoritmoBurbuja(listaNumeros: list) -> list:
-    
+    #Usamos la longitud de la lista que entra por parametros para indicar el rango de la iteracion 
     cont = len(listaNumeros)
     
     #Con la primera iteracion recorreremos todos los numeros de la cadena 
@@ -13,7 +13,7 @@ def ordenacionAlgoritmoBurbuja(listaNumeros: list) -> list:
                 
                 listaNumeros[j] = j1_temporal
                 listaNumeros[j + 1] = j_temporal
-
+    #Devolvemos la lista de numeros ya ordenada
     return listaNumeros
     
     
